@@ -1,14 +1,13 @@
 import React from "react"
 import BulletList from "../BulletList"
-import items from "../../assets/items"
 
-function FlashCard() {
+function FlashCard({items}) {
     return <section id="sections">
         {
             items.map((item, index) => {
                 return (
-                    <div key={index}>
-                        <h5>{item.title}</h5>
+                    <div id={'bm_'+index} key={index}>
+                        <h5><a href="#top">Top</a>{item.title}</h5>
                         <BulletList items={item.content} />
                     </div>
                 );

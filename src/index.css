@@ -1,10 +1,20 @@
 body {
   margin: 0;
+  padding: 0 0 500px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a[href="#top"] {
+  float: right;
+  font-size: 12px;
+  text-decoration: none;
+  position: relative;
+  right: 10px;
+  color: blue;
 }
 
 code {
@@ -15,9 +25,18 @@ code {
 h1 {
   font-size:18px;
 }
-
+#sectionsList {
+  padding: 0 0 20px;
+}
+  #sectionsList select {
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #ccc;
+    border-left-width: 10px;
+    border-right-width: 10px;
+  }
 #sections {
-
+  margin: 0 auto 100px;
 }
   #sections > div {
     text-align: left;
@@ -30,10 +49,45 @@ h1 {
     }
     #sections > div > ul {
       margin: 5px 0 10px 5px;
+      list-style-type: circle;
     }
       #sections > div > ul li {
-        color: mediumblue;
+        color: #444;
+        padding: 0 0 7px 0;
       }
+        #sections > div > ul > li.bulletless {
+          border-top: solid 1px #ccc;
+          list-style-type: none;
+          position: relative;
+          left: -20px;
+        }
+        #sections > div > ul > li.bulletless:first-child {
+          border-top: none;
+          margin-top: 15px;
+        }
+        #sections > div > ul li label {
+          border: solid 1px #ddd;
+          border-radius: 8px;
+          padding: 0px 6px 2px 4px;
+          line-height: 32px;
+          margin: 0 6px 0 0px;
+          background-color: floralwhite;
+        }
+          #sections > div > ul li label+label {
+            background-color: lightgoldenrodyellow;
+          }
+          #sections > div > ul li label+label+label {
+            background-color: aliceblue;
+          }
+          #sections > div > ul li label+label+label+label {
+            background-color: antiquewhite;
+          }
+          #sections > div > ul li label+label+label+label+label {
+            background-color: lightgoldenrodyellow;
+          }
+          #sections > div > ul li label+label+label+label+label+label {
+            background-color: floralwhite;
+          }
         #sections > div > ul li i {
           display: inline-block;
           color: gray;
@@ -43,6 +97,13 @@ h1 {
           display: inline-block;
           color: gray;
         }
+          #sections > div > ul li:not(.bulletless) em {
+            color: forestgreen;
+            font-family: auto;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 17px;
+          }
         #sections > div > ul li em:before {
           content: '- ';
           display: inline-block;
